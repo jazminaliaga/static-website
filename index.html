@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Jowe Boy&apos;s Website</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
-	</head>
 
-	<body>
-		<header>
-			<div class="row">
-				<div class="logo">
-					<img src="assets/logo-new.png" alt="oe_logo">
-				</div>
-				<ul class="main-nav">
-					<li class="active"><a href="">HOME</a></li>
-					<li><a href="">SERVICES</a></li>
-					<li><a href="">ABOUT</a></li>
-					<li><a href="">BLOG</a></li>
-					<li><a href="">CONTACT</a></li>
-					<li><a href="">FAQ</a></li>
-				</ul>
-			</div>
-			<div class="hero">
-				<h1>Ready for Action?</h1>
-				<div class="button">
-					<a href="" class="btn btn-one">Watch Video</a>
-					<a href="" class="btn btn-two">Explore More</a>
-				</div>
-			</div>
-		</header>
-		<section class="service grid-container">
-		</section>
-		<section class="about grid-container">
-		</section>
-		<section class="blog grid-container">
-		</section>
-		<section class="contact grid-container">
-			<div class="contact-form grid-item">
-				<div class="contact-section-header">
-					<h2>Get in touch with us!</h2>
-				</div>
-				<form class="form">
-					<input type="text" name="fullname" placeholder="Fullname">
-					<input type="email" name="email" placeholder="Email Address">
-					<input type="number" name="phonenumber" placeholder="Phone Number">
-					<textarea class="subject" name="subject" placeholder="Your subject here..."></textarea>
-					<input class="button" type="submit" value="Submit">
-				</form>
-			</div>
-			<div class="contact-form grid-item">
-			</div>
-		</section>
-		<section class="faq grid-container">
-		</section>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title>CodeBin Manager - ERP para Pequeñas Empresas</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Logo CodeBin">
+                </div>
+                <h1>Gestiona tu Pequeña Empresa</h1>
+            </div>
+        </div>
+        <div class="hero">
+            <p>Gestiona con un ERP intuitivo y completo diseñado. <br>Un Enterprise Resource Planning es un sistema de software que integra y gestiona los procesos clave de una empresa. Su objetivo principal es optimizar la eficiencia y proporcionar una visión unificada del negocio.</p>
+            <div class="button">
+                <a href="#demo" class="btn btn-one">Ver Demo</a>
+                <a href="#contacto" class="btn btn-two">Solicitar Información</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="servicios" class="service grid-container">
+        <h2>Módulos Principales</h2>
+        <div class="grid-item">
+            <h3>Gestión de Stock</h3>
+            <p>Control total de tu inventario. Registra, consulta y actualiza tu stock de forma sencilla y eficiente.
+            </p>
+        </div>
+        <div class="grid-item">
+            <h3>Gestión de Empleados</h3>
+            <p>Administra tu equipo, consulta información y define rangos de acceso para una mejor organización.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Acceso Seguro</h3>
+            <p>Sistema de login robusto para proteger la información vital de tu empresa.</p>
+        </div>
+    </section>
+
+    <section id="nosotros" class="about grid-container">
+        <h2>Sobre CodeBin</h2>
+        <p>Somos un equipo de 5 estudiantes apasionados por el desarrollo de software. En CodeBin, creemos en el poder
+            de la tecnología para simplificar la gestión de las pequeñas empresas. Con muchas ganas de aprender y
+            crecer, hemos creado CodeBin Manager para ofrecer una solución ERP accesible y efectiva.</p>
+    </section>
+
+    <section id="contacto" class="contact grid-container">
+        <div class="contact-form grid-item">
+            <div class="contact-section-header">
+                <h2>¡Impulsa tu Negocio!</h2>
+            </div>
+            <form class="form">
+                <input type="text" name="fullname" placeholder="Nombre Completo">
+                <input type="email" name="email" placeholder="Correo Electrónico">
+                <input type="number" name="phonenumber" placeholder="Número de Teléfono">
+                <textarea class="subject" name="subject" placeholder="Mensaje"></textarea>
+                <input class="button" type="submit" value="Enviar Consulta">
+            </form>
+        </div>
+        <div class="contact-info grid-item">
+            <p>¿Listo para llevar tu gestión al siguiente nivel? Contáctanos para más información o para solicitar una
+                demo.</p>
+            <h3>Contáctanos</h3>
+            <p>Email: info@codebin.com</p>
+            <p>Teléfono: +54 9 2615555555</p>
+            <p>Mendoza, Argentina</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CodeBin. Todos los derechos reservados.</p>
+    </footer>
+</body>
 
 </html>

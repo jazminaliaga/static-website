@@ -1,201 +1,311 @@
+/* Reset básico para asegurar consistencia */
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: monospace;
+    font-family: monospace;
+    color: #f0f0f0; /* Color de texto principal */
+    background-color: #181818; /* Fondo principal */
+    line-height: 1.6;
+    font-size: 16px; /* Tamaño de fuente base para unidades relativas */
 }
 
+/* Estilos del encabezado */
 header {
-	background-image: url(assets/banner-bg.jpg);
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-}
-
-.main-nav {
-	float: right;
-	list-style: none;
-	margin-top: 55px;
-}
-
-.main-nav li {
-	display: inline-block;
-}
-
-.main-nav li a {
-	color: white;
-	text-decoration: none;
-	padding: 5px 20px;
-	font-family: "Roboto", sans-serif;
-	font-size: 15px;
-}
-
-.main-nav li.active a {
-	border-bottom: 1px solid white;
-}
-
-.main-nav li a:hover {
-	border-bottom: 1px solid white;
-}
-
-.logo {
-	width: 100px;
-	height: auto;
-	float: left;
-	margin-top: 30px;
+    background-color: #181818;
+    padding-top: 2%;
 }
 
 .row {
-	max-width: 1200px;
-	margin: auto;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Fondo blanco para el logo y el título */
+    justify-content: space-between; /* Espacia los elementos a los extremos */
 }
 
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el logo */
+}
+
+.logo {
+    width: 15%; /* Ajusta el tamaño del logo */
+    height: auto;
+    max-width: 15%;
+    padding: 1% 2%;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.row h1 {
+    color: #000;
+    font-size: 3em;
+    text-align: center; /* Centra el texto */
+    flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+    margin-left: 2%; /* Espacio entre el logo y el título */
+}
+
+/* Estilos de la sección Hero */
 .hero {
-	position: absolute;
-	top: 100px;
-	width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
-h1 {
-	font-family: "Roboto", sans-serif;
-	color: white;
-	text-transform: uppercase;
-	font-size: 70px;
-	text-align: center;
-	margin-top: 300px;
+.hero p {
+    font-size: 1.2em;
+    color: #ccc;
+    max-width: 80%;
+    margin: 0 auto; /* Centra el párrafo */
+    padding-bottom: 5%;
 }
 
 .button {
-	text-align: center;
-	margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
 }
 
 .btn {
-	font-family: "Roboto", sans-serif;
-	border: 1px solid white;
-	padding: 10px 30px;
-	color: white;
-	margin-right: 5px;
-	font-size: 13px;
-	text-transform: uppercase;
-	text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid #fff;
+    padding: 1% 3%;
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
-.btn-one {
-	background-color: darkorange;
+.btn:hover {
+    background-color: #fff;
+    color: #181818;
 }
 
-.btn-two:hover {
-	background-color: darkorange;
-	transition: all 0.2s ease-in;
-}
-
-.grid-container {
-	display: grid;
-  	grid-template-columns: auto auto;
-  	padding: 10px;
-}
-
-.grid-item {
-	padding: 20px;
+/* Estilos de las secciones de contenido principal */
+.service,
+.about,
+.contact {
+    padding: 2% 2%;
+    text-align: center;
+    margin-top: 0; /* Asegura que no haya margen superior */
 }
 
 .service {
-	background-image: url(assets/img-banner@2x.png);
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
+    background-color: #222;
 }
 
 .about {
-	background-image: url(assets/DSC_0036.JPG);
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-}
-
-.blog {
-	background-image: url(assets/banner-texture@2x.png);
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
-
+    background-color: #1e1e1e;
 }
 
 .contact {
-	background-image: url(assets/img-contact-form-bg.jpg);
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
+    background-color: #282828;
 }
 
-.faq {
-	background-image: url(assets/img-prop-type@2x.jpg);
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
+/* Estilos del contenedor de la grilla */
+.grid-container {
+    max-width: 90%;
+    margin: 2% auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Layout responsivo de columnas */
+    gap: 2%;
+    padding: 2%;
+    text-align: left;
+    color: #f0f0f0;
 }
 
+/* Estilos de los elementos de la grilla */
+.grid-item {
+    padding: 2%;
+    border: 1px solid #333;
+}
+
+.grid-item h3 {
+    color: #fff;
+    margin-bottom: 1%;
+    font-size: 1.5em;
+}
+
+.grid-item p {
+    color: #ccc;
+    font-size: 1em;
+}
+
+/* Estilos específicos del formulario de contacto */
 .contact-form {
-	font-family: "Arial", "Helvetica", sans-serif;
-	margin: auto;
-	padding: 0 200px;
+    max-width: 60%;
+    margin: 5% auto;
+    padding: 5%;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: left;
 }
 
 .contact-section-header {
-	color: #282828;
-	font-family: "Roboto", sans-serif;
-	font-size: 25px;
-	margin-bottom: 20px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 3%;
+    text-align: center;
 }
 
-.form input, textarea {
-	font-size: 20px;
-	text-decoration: none;
-	outline: none;
-	width: 70%;
-	height: 60px;
-	padding-left: 10px;
-	border-radius: 6px;
-	border: none;
-	margin: 5px 0;
+.contact-section-header p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="number"],
+.form textarea {
+    font-size: 1em;
+    padding: 3%;
+    margin-bottom: 3%;
+    border: 1px solid #555;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+.form textarea {
+    height: 15vw; /* Altura relativa al ancho de la ventana */
+    min-height: 100px;
 }
 
 .form input.button {
-    background-color: #4CAF50; /* Green */
+    background-color: #fff;
+    color: #181818;
     border: none;
-    color: white;
-    width: 71%;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
+    padding: 3% 5%;
+    font-size: 1em;
+    border-radius: 4px;
     cursor: pointer;
- }
+    transition: background-color 0.3s ease;
+    width: auto;
+    display: block;
+    margin: 5% auto 0;
+}
 
-input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
- }
+.form input.button:hover {
+    background-color: #ccc;
+    color: #181818;
+}
 
- .subject {
- 	height: 150px;
- 	color: black;
- }
+/* Estilos de la información de contacto */
+.contact-info {
+    text-align: center;
+    margin-top: 5%;
+    padding-top: 15%;
+    color: #ccc;
+}
 
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
-  	.blog {
-    	background-image: url(assets/banner-texture@2x.png) !important;
-  	}
+.contact-info h3 {
+    color: #fff;
+    margin-bottom: 1%;
+    font-size: 2em;
+}
 
-  	.faq {
-    	background-image: url(assets/img-prop-type@2x.jpg) !important;
-  	}
+.contact-info p {
+    margin-bottom: 1%;
+    font-size: 1.1em;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 2% 0;
+    font-size: 0.8em;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ajuste de fuente base en móvil */
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+        padding: 5% 2%;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 2%;
+        width: 20%;
+    }
+
+    .logo-container h1 {
+        font-size: 1.2em;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.2em;
+        margin-top: 15%;
+    }
+
+    .hero {
+        padding-top: 8%;
+        padding-bottom: 8%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        padding: 5%;
+    }
+
+    .contact-form {
+        padding: 8%;
+        max-width: 90%;
+        margin: 8% auto;
+    }
+
+    .form textarea {
+        height: 30vh;
+        min-height: auto;
+    }
+
+    .button {
+        flex-direction: column;
+        align-items: center;
+        gap: 3%;
+    }
+
+    .btn {
+        width: 80%;
+        padding: 4% 8%;
+    }
+
+    .contact-info {
+        margin-top: 8%;
+    }
 }
